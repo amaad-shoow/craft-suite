@@ -8,6 +8,11 @@ set -uo pipefail
 
 cd "$(dirname "$0")"
 
+# Ne jamais demander identifiants : une URL HTTPS vers un repo inexistant
+# ferait basculer git en invite interactive. On veut un echec net.
+export GIT_TERMINAL_PROMPT=0
+GIT_TMO=${GIT_TMO:-15}
+
 CHECK_ONLY=0
 [ "${1:-}" = "--check" ] && CHECK_ONLY=1
 
@@ -41,9 +46,9 @@ while IFS=$'\t' read -r path _pinned; do
   url=$(git config -f .gitmodules "submodule.$path.url")
   [ -z "$url" ] && { printf '  ! %-28s absent de .gitmodules\n' "$path"; continue; }
 
-  remote=$(git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}')
+  remote=$(timeout "$GIT_TMO" git ls-remote "$url" HEAD 2>/dev/null | awk '{print $1}')
   if [ -z "$remote" ]; then
-    printf '  ! %-28s upstream injoignable (%s)\n' "$path" "$url"
+    printf '  ! %-28s injoignable : %s\n' "$path" "$url"
     remote=$_pinned
   fi
 
