@@ -1,48 +1,48 @@
 [submodule "apps/artcraft"]
 	path = apps/artcraft
-	url = https://github.com/amaad-shoow/artcraft.git
+	url = https://github.com/storytold/artcraft.git
 [submodule "apps/photocraft"]
 	path = apps/photocraft
-	url = https://github.com/amaad-shoow/photocraft.git
+	url = https://github.com/storytold/photocraft.git
 [submodule "apps/vectorcraft"]
 	path = apps/vectorcraft
-	url = https://github.com/amaad-shoow/vectorcraft.git
+	url = https://github.com/storytold/vectorcraft.git
 [submodule "apps/filmcraft"]
 	path = apps/filmcraft
-	url = https://github.com/amaad-shoow/filmcraft.git
+	url = https://github.com/storytold/filmcraft.git
 [submodule "apps/lightcraft"]
 	path = apps/lightcraft
-	url = https://github.com/amaad-shoow/lightcraft.git
+	url = https://github.com/storytold/lightcraft.git
 [submodule "apps/pdfcraft"]
 	path = apps/pdfcraft
-	url = https://github.com/amaad-shoow/pdfcraft.git
+	url = https://github.com/storytold/pdfcraft.git
 [submodule "apps/effectcraft"]
 	path = apps/effectcraft
-	url = https://github.com/amaad-shoow/effectcraft.git
+	url = https://github.com/storytold/effectcraft.git
 [submodule "apps/designcraft"]
 	path = apps/designcraft
-	url = https://github.com/amaad-shoow/designcraft.git
+	url = https://github.com/storytold/designcraft.git
 [submodule "apps/wordcraft"]
 	path = apps/wordcraft
-	url = https://github.com/amaad-shoow/wordcraft.git
+	url = https://github.com/storytold/wordcraft.git
 [submodule "apps/soundcraft"]
 	path = apps/soundcraft
-	url = https://github.com/amaad-shoow/soundcraft.git
+	url = https://github.com/storytold/soundcraft.git
 [submodule "apps/cadcraft"]
 	path = apps/cadcraft
-	url = https://github.com/amaad-shoow/cadcraft.git
+	url = https://github.com/storytold/cadcraft.git
 [submodule "apps/gridcraft"]
 	path = apps/gridcraft
-	url = https://github.com/amaad-shoow/gridcraft.git
+	url = https://github.com/storytold/gridcraft.git
 [submodule "apps/deckcraft"]
 	path = apps/deckcraft
-	url = https://github.com/amaad-shoow/deckcraft.git
+	url = https://github.com/storytold/deckcraft.git
 [submodule "apps/craft-launcher"]
 	path = apps/craft-launcher
-	url = https://github.com/amaad-shoow/craft-launcher.git
+	url = https://github.com/storytold/craft-launcher.git
 [submodule "shared/craft-libs"]
 	path = shared/craft-libs
-	url = https://github.com/amaad-shoow/craft-libs.git
+	url = https://github.com/storytold/craft-libs.git
 [submodule "shared/craft-fonts"]
 	path = shared/craft-fonts
-	url = https://github.com/amaad-shoow/craft-fonts.git
+	url = https://github.com/storytold/craft-fonts.git
