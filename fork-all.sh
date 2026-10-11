@@ -38,10 +38,6 @@ REPOS=$(
 todo=(); skipped=(); failed=()
 
 for r in $REPOS; do
-  if [ "$r" = "artcraft" ] || [ "$r" = "craft-launcher" ] || [ "$r" = "craft-libs" ] || [ "$r" = "craft-fonts" ]; then
-    :
-  fi
-
   code=$(curl -s -o /dev/null -w '%{http_code}' "https://api.github.com/repos/$OWNER/$r")
   if [ "$code" = "200" ]; then
     skipped+=("$r"); continue
@@ -52,7 +48,7 @@ for r in $REPOS; do
     continue
   fi
 
-  if gh repo fork "$UPSTREAM/$r" --clone=false --remote=false >/dev/null 2>&1; then
+  if gh api -X POST "repos/$UPSTREAM/$r/forks" >/dev/null 2>&1; then
     todo+=("$r"); printf '  %-16s fork OK\n' "$r"
   else
     failed+=("$r"); printf '  %-16s ECHEC\n' "$r"
